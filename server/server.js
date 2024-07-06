@@ -16,7 +16,7 @@ app.use(express.json())
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(cors({
-  origin:["https://uploader-files-app.vercel.app"],
+  origin:["https://uploader-files-app-server.vercel.app"],
   methods:["GET", "POST", "DELETE"],
   credentials:true
 }))
@@ -26,7 +26,7 @@ const fileRoutes = require('./routes/files')
 app.use('/files', fileRoutes)
 
 app.get('/', (req, res) => {
-  res.send('<h1>Server Working</h1>')
+  res.send('Server Working')
 })
 
 const connectionString = process.env.ATLAS_URI
