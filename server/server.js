@@ -16,7 +16,7 @@ app.use(express.json())
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(cors({
-  origin:["https://uploader-files-app-server.vercel.app/"],
+  origin:["https://uploader-files-app.vercel.app"],
   methods:["GET", "POST", "DELETE"],
   credentials:true
 }))
