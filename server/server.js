@@ -21,6 +21,10 @@ app.use(fileUpload())
 const fileRoutes = require('./routes/files')
 app.use('/files', fileRoutes)
 
+app.get('/', (req, res) => {
+  res.send('<h1>Server Working</h1>')
+})
+
 const connectionString = process.env.ATLAS_URI
 mongoose
   .connect(connectionString, {
